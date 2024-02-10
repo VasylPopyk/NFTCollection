@@ -1,0 +1,54 @@
+.offers{
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+    margin: 100px auto;
+    padding: 10px;
+    .offers_container{
+        width: 100%;
+        padding: 5px;
+        @include flex(column, flex-start, flex-start);
+        .offers_header{
+            h1{@include font(50px, 'Arial', 700, none, $dark); line-height: 54px;}
+            @media(max-width: 840px){
+                h1{font-size: 40px;}
+            }
+            @media(max-width: 600px){
+                h1{font-size: 32px;}
+            }
+        }
+        .offers_content{
+            width: 100%;
+            @include flex(row, center, center);
+            flex-wrap: wrap;
+            .offers_content_item{
+                z-index: 10;
+                position: relative;
+                top: 0;
+                left: 0;
+                margin: 10px;
+                padding: 20px 10px;
+                flex: 1 1 25%;
+                width: 100%;
+                min-width: 175px;
+                height: 60px;
+                background-color: $light;
+                border-radius: 20px;
+                box-shadow: 0px 10px 10px rgba(200, 200, 200, 0.5);
+                @include flex(row, center, center);
+                h3{@include font(16px, 'Arial', 700, none, $dark)}
+                &:nth-child(1){
+                    background-color: black;
+                    h3{color: $light;}
+                    .offers_content_item_offer{
+                        @include position(absolute, -10px, 37.7%, 75px, 20px, 50);
+                        @include font(8px, 'Arial', 900, none, $dark);
+                        @include flex(row, center, center);
+                        background-color: rgb(220, 255, 75);
+                        border-radius: 2px;
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+    }   
+}

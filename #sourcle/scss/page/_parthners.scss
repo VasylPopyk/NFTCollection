@@ -1,0 +1,32 @@
+.parthners{
+    background-color: $light;
+    margin: 150px auto;
+    border-radius: 35px;
+    .parthners_container{
+        width: 100%;
+        padding: 40px 50px;
+        @include flex(row, center, space-between);
+        h1{@include font(16px, 'Arial', 700, none, $dark); width: 100px; margin: 0px 30px 0px 0px;}
+        .parthners_container_items{
+            @include flex(row, center, space-between);
+            flex-wrap: wrap;
+            margin: 0px 30px;
+            width :100%;
+            .parthners_item{
+                @include flex(row, center, center);
+                margin :10px;
+                img{
+                    width: 35px;
+                    height :35px;
+                    background-color: $dark;
+                    border-radius: 50%;
+                    margin: 10px;
+                }
+                p{@include font(16px, 'Arial', 600, none, $dark)}
+            }
+        }
+    }
+    @media(max-width: 767px){
+        margin: 330px auto;
+    }
+}

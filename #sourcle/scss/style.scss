@@ -1,0 +1,18 @@
+@import "config/mixins";
+@import "config/null";
+@import "config/templates";
+@import "config/variables";
+
+@import "footer/footer";
+.wrapper{
+    //page styles
+    @import "header/header";
+    .page{
+        @import "page/banner";
+        @import "page/parthners";
+        @import "page/offers";
+        @import "page/about";
+        @import "page/collection";
+        @import "page/roadmap";
+    }
+}

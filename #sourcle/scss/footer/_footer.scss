@@ -1,0 +1,52 @@
+.footer{
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+    margin: 70px auto;
+    padding: 10px;
+    .footer_container{
+        @include flex(row, center, space-between);
+        width: 100%;
+        .footer_logo{
+            @include flex(row, center, center);
+            h3{
+                width: 150px;
+                height: 45px;
+                border-radius: 10px;
+                background-color: white;
+                @include font(22px, ('Segoe UI', Tahoma, Geneva, Verdana, sans-serif), 400, none, $light);
+                margin: 5px;
+            }
+            img{
+                width: 45px;
+                height: 45px;
+                border-radius: 10px;
+                background-color: black;
+                margin: 5px;
+            }
+        }
+        .footer_copyright{
+            p{@include font(18px, ('Segoe UI', Tahoma, Geneva, Verdana, sans-serif), 400, none, rgb(150, 150, 150));}
+        }
+        .footer_menu{
+            @include flex(row, center, center);
+            .footer_menu_item{
+                margin: 0px 15px;
+                a{@include font(20px, ('Segoe UI', Tahoma, Geneva, Verdana, sans-serif), 500, none, black)}
+            }
+        }
+        @media(max-width: 767px){
+            @include flex(column, center, center);
+            .footer_logo{margin: 10px;}
+            .footer_copyright{margin: 10px;}
+            .footer_menu{margin: 10px;}
+        }
+        @media(max-width: 450px){
+            .footer_menu{
+                flex-direction: column;
+                .footer_menu_item{
+                    margin :10px;
+                }
+            }
+        }
+    }
+}
